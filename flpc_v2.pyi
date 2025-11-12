@@ -2,49 +2,54 @@ from typing import List, Optional, Tuple
 
 class Pattern:
     """A compiled regular expression pattern."""
+
     regex: Regex
     def __init__(self, regex: Regex): ...
 
 class Match:
     """A match object returned by a regex search."""
+
     mat: regex.Match
     def __init__(self, mat: regex.Match): ...
-    
     def group(self, idx: int) -> Optional[str]:
         """Return the string matched by the group idx."""
         ...
-        
+
     def groups(self) -> List[Optional[str]]:
         """Return a list of all groups matched by the pattern."""
         ...
-        
+
     def start(self, idx: int) -> Optional[int]:
         """Return the starting position of the match."""
         ...
-        
+
     def end(self, idx: int) -> Optional[int]:
         """Return the ending position of the match."""
         ...
-        
+
     def span(self, idx: int) -> Optional[Tuple[int, int]]:
         """Return a tuple containing the (start, end) positions of the match."""
         ...
 
 class Scanner:
     """A scanner object (not implemented)."""
+
     ...
 
 class RegexFlag:
     """A struct representing regex flags."""
+
     bits: int
     def __init__(self, bits: int): ...
 
 class Constants:
     """A struct for regex constants (not implemented)."""
+
     ...
 
 class Sre:
     """A struct for regex engine (not implemented)."""
+
     ...
 
 def compile(pattern: str, flags: Optional[int] = ...) -> Pattern:
