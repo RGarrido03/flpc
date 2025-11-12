@@ -39,7 +39,7 @@ jobs:
       - name: Store the distribution packages
         uses: actions/upload-artifact@v5
         with:
-          name: py-rust-encode-varint-wheels-${{ matrix.os }}-${{ strategy.job-index }}
+          name: flpc-v2-wheels-${{ matrix.os }}-${{ strategy.job-index }}
           path: target/wheels/*.whl
 
   publish-to-pypi:
@@ -58,9 +58,6 @@ jobs:
         with:
           path: dist/
           merge-multiple: true
-
-      - name: Remove files ending in linux (keep)
-        run: cd dist && rm *linux_aarch64.whl *linux_x86_64.whl
 
       - name: Publish wheels to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
