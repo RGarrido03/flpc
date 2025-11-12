@@ -1,6 +1,6 @@
 [project]
 name = "flpc_v2"
-version = "0.3.2"
+version = "0.3.3"
 description = "A Lightning Fast ⚡ Rust-based regex crate wrapper for Python3 to get faster performance. 👾"
 maintainers = [{ name = "Adarsh Gourab Mahalik", email = "gourabmahalikadarsh@gmail.com" }]
 readme = "README.md"
@@ -11,7 +11,6 @@ classifiers = [
    "Programming Language :: Python :: Implementation :: CPython",
    "Programming Language :: Python :: Implementation :: PyPy",
 ]
-dynamic = ["version"]
 
 [tool.maturin]
 features = ["pyo3/extension-module"]

@@ -2,7 +2,7 @@ import re  # noqa: D100
 import time
 from random import choices
 from string import ascii_letters, digits
-from flpc import (
+from flpc_v2 import (
     compile,
     escape,
     fmatch,

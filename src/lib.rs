@@ -204,20 +204,20 @@ fn purge() -> PyResult<()> {
 }
 
 #[pymodule]
-fn flpc(m: &Bound<'_, PyModule>) -> PyResult<()> {
+fn flpc_v2(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_class::<Pattern>()?;
     m.add_class::<Match>()?;
     m.add_class::<Scanner>()?;
     m.add_class::<RegexFlag>()?;
     m.add_class::<Constants>()?;
     m.add_class::<Sre>()?;
-    m.add("__version__", "0.1.4")?;
+    m.add("__version__", "0.3.3")?;
     m.add(
         "__doc__",
         "",
     )?;
-    m.add("__name__", "flpc")?;
-    m.add("__package__", "flpc")?;
+    m.add("__name__", "flpc_v2")?;
+    m.add("__package__", "flpc_v2")?;
     m.add(
         "__all__",
         vec![
